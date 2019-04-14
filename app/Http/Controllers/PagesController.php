@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function home(){
-        $messages = Message::all();
+        //$messages = Message::all();
+        $messages = Message::paginate(2);//10 por pagina
         //dd($messages);
         return view('welcome', ['aplication' => "larater", 'messages' => $messages]);
     }

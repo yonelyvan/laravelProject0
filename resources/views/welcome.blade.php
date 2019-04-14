@@ -50,8 +50,16 @@
             </div>   
         @empty
         <p>No hay mensajes destacados</p>
-            
         @endforelse
+
+        <!--paginando -->
+        @if (count($messages))
+            <div class="mt-2 mx-auto">
+            <!-- solo cuando se tiene paginacion -->
+            {{$messages->links()}}  
+            </div>           
+        @endif
+
     </div>
 
 @endsection
