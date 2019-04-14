@@ -24,3 +24,11 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+
+$factory->define(App\Message::class, function (Faker $faker){
+    return [
+        'content' => $faker->realText(random_int(20,160)),
+        'image' => $faker->imageUrl(600,338)
+    ];
+});

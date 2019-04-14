@@ -18,3 +18,7 @@ php artisan migrate:refresh
 
 php artisan make:controller MessagesController
 php artisan make:request CreateMessageRequest
+
+php artisan db:seed
+php artisan migrate:refresh --seed
+
