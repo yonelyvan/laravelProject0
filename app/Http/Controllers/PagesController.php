@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Message;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function home(){
-        $aplication = "Frigy";
-        return view('welcome', ['aplication' => $aplication]);
+        $messages = Message::all();
+        //dd($messages);
+        return view('welcome', ['aplication' => "larater", 'messages' => $messages]);
     }
+
+
 
     public function aboutme(){
         $topics = [

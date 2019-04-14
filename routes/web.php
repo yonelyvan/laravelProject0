@@ -9,3 +9,6 @@ Route::any( '/about',
         return view('aboutus');
     }
 );
+
+Route::get('/messages/{message}','MessagesController@show');
+Route::post('/messages/create','MessagesController@create');
