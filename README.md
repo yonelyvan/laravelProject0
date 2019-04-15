@@ -28,3 +28,7 @@ php artisan db:seed
 php artisan migrate:refresh --seed
 
 #usuarios
+php artisan make:auth
+
+#add_users_id_column_to_messages_table
+php artisan make:migration add_users_id_column_to_messages_table --table messages

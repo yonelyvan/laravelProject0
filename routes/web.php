@@ -11,8 +11,9 @@ Route::any( '/about',
 );
 
 Route::get('/messages/{message}','MessagesController@show');
-Route::post('/messages/create','MessagesController@create');
+Route::post('/messages/create','MessagesController@create')->middleware('auth');
 
 //login
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
