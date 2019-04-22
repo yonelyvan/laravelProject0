@@ -32,3 +32,34 @@ php artisan make:auth
 
 #add_users_id_column_to_messages_table
 php artisan make:migration add_users_id_column_to_messages_table --table messages
+
+
+
+#notificaciones
+php artisan notifications:table
+php artisan migrate
+
+php artisan make:model Notification
+php artisan make:notification UserOnWarning
+
+#real time 
+npm install laravel-echo pusher-js --save-dev
+composer require pusher/pusher-php-server
+
+
+npm run watch
+
+
+
+#pusher.com
+
+
+
+
+
+
+php artisan tinker
+>>> use App\User;
+
+>>> $controller = app()->make('App\Http\Controllers\AppController');
+>>> app()->call([$controller, 'debug_notification'], []);

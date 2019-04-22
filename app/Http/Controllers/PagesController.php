@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Notification;
 use App\Message;
 use Illuminate\Http\Request;
 
@@ -28,5 +30,10 @@ class PagesController extends Controller
         $author = "Yonel Mamani";
         $profile = "Computer Science";
         return view('aboutme', ['topics' => $topics, 'author' => $author, 'profile' => $profile]);
+    }
+    
+    public function notifications(Request $request){
+        //pp($request);
+        return Notification::all();
     }
 }

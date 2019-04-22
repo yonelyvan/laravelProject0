@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="jumbotron text-center">
-        <h1>{{$aplication}}</h1>
+        <h1>laratter</h1>
         <nav>
             <ul class="nav nav-pills">
                 <li class="nav-item">
